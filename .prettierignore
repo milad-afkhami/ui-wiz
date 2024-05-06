@@ -1,0 +1,10 @@
+# Ignore artifacts:
+node_modules
+build
+coverage
+.vercel
+yarn.lock
+package-lock.json
+*.min.*
+.yarn
+.rollup.cache

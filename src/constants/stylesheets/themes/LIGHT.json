@@ -1,0 +1,111 @@
+{
+  "brand": {
+    "primary": {
+      "main": "#f6be89",
+      "hover": "#E8AA77",
+      "light": "#F2CEAD",
+      "lighter": "#FAEADC",
+      "dark": "#E5A26D",
+      "darker": "#CB9061",
+      "pale": "#efc7a3b2",
+      "paler": "#efc7a366",
+      "contrast": "#141416"
+    },
+    "secondary": {
+      "main": "#E3944F",
+      "contrast": "#FFFFFF",
+      "light": "#fcb897"
+    }
+  },
+  "bg": {
+    "primary": {
+      "main": "#FFFFFF",
+      "dark": "#FAFAFA",
+      "pale": "#B7BAD8",
+      "paler": "#F5F6FA"
+    },
+    "secondary": {
+      "main": "#E9E9E9",
+      "light": "#F6F6F7",
+      "dark": "#00000099"
+    },
+    "tertiary": {
+      "main": "#474D66",
+      "light": "#474D66",
+      "lighter": "#8F95B2",
+      "dark": "#040920"
+    },
+    "disabled": {
+      "main": "#0000001F"
+    }
+  },
+  "text": {
+    "primary": {
+      "main": "#202223"
+    },
+    "secondary": {
+      "main": "#666666",
+      "light": "#878CBE",
+      "paler": "#F6F6FA",
+      "hover": "#101840",
+      "contrast": "#FAFBFF"
+    },
+    "tertiary": {
+      "main": "#00000061"
+    },
+    "disabled": {
+      "main": "#00000061"
+    }
+  },
+  "assistive": {
+    "success": {
+      "main": "#429777",
+      "hover": "#317159",
+      "light": "#52BD94",
+      "lighter": "#A3E6CD",
+      "dark": "#317159",
+      "pale": "#DCF2EA",
+      "paler": "#F5FBF8",
+      "contrast": "#fff"
+    },
+    "error": {
+      "main": "#A73636",
+      "hover": "#7D2828",
+      "light": "#D14343",
+      "lighter": "#EE9191",
+      "pale": "#F4B6B6",
+      "dark": "#7D2828",
+      "paler": "#FDF4F4",
+      "contrast": "#fff"
+    },
+    "info": {
+      "main": "#2952CC",
+      "hover": "#1F3D99",
+      "light": "#3366FF",
+      "lighter": "#9DB5FF",
+      "dark": "#1F3D99",
+      "pale": "#D6E0FF",
+      "paler": "#F3F6FF",
+      "contrast": "#fff"
+    },
+    "warning": {
+      "main": "#996A13",
+      "hover": "#66460D",
+      "light": "#FFB020",
+      "lighter": "#FFD079",
+      "dark": "#66460D",
+      "pale": "#FFDFA6",
+      "paler": "#FFFAF1",
+      "contrast": "#202223"
+    }
+  },
+  "border": {
+    "dark": {
+      "main": "#9E9E9E",
+      "hover": "#202223"
+    },
+    "light": {
+      "main": "#EEEEEE"
+    }
+  }
+}

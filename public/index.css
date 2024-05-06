@@ -1,0 +1,34 @@
+@import url("./stylesheets/style-wiz/index.css");
+@import url("./fonts/icons/style.css");
+@import url("./stylesheets/reset.css");
+
+body {
+  font-family: "system-ui";
+  font-size: var(--font-size-md);
+  color: var(--color-text-primary-main);
+  background-color: var(--color-bg-primary-main);
+}
+
+/* #region headings */
+h1 {
+  font-size: var(--font-size-h-xxl);
+  font-weight: bold;
+}
+
+h2 {
+  font-size: var(--font-size-h-xl);
+  font-weight: 400;
+}
+
+h3 {
+  font-size: var(--font-size-h-sm);
+  font-weight: bold;
+}
+
+/* #endregion */
+
+/* default dir is ltr */
+[dir="rtl"] .icon-dir {
+  display: inline-block;
+  transform: rotate(180deg);
+}

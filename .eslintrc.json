@@ -1,0 +1,71 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": [
+    "plugin:storybook/recommended",
+    "eslint:recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "airbnb-typescript",
+    "prettier",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:security/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/ban-ts-comment": "off",
+    "quotes": "off",
+    "@typescript-eslint/quotes": "off",
+    "react/function-component-definition": "off",
+    "func-names": "off",
+    "security/detect-object-injection": "off",
+    "no-sparse-arrays": "off",
+    "no-underscore-dangle": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "no-param-reassign": "off",
+    "react/prop-types": "off",
+    "@typescript-eslint/naming-convention": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/no-array-index-key": "off",
+    "react/require-default-props": "off",
+    "react/jsx-no-duplicate-props": "off",
+    "react/display-name": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "react/jsx-props-no-spreading": "off",
+    "class-methods-use-this": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/consistent-type-imports": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "external",
+          "builtin",
+          "internal",
+          "index",
+          "sibling",
+          "parent",
+          "object",
+          "type"
+        ]
+      }
+    ]
+  },
+  "plugins": ["@typescript-eslint", "eslint-plugin-import"],
+  "ignorePatterns": [
+    "node_modules",
+    ".yarn",
+    ".storybook",
+    "build",
+    "storybook-static",
+    "public",
+    "jest.setup.ts",
+    "rollup.config.mjs"
+  ]
+}

@@ -1,0 +1,5 @@
+if [[ "$(yarn -v)" = 1* ]]; then
+    yarn commitlint --edit "$1"
+else
+    npx --no -- commitlint --edit ${1}
+fi
