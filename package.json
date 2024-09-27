@@ -1,7 +1,7 @@
 {
   "name": "ui-wiz",
   "description": "UIWiz Toolkit",
-  "version": "0.1.0-beta.1",
+  "version": "0.1.0-beta.2",
   "sideEffects": false,
   "type": "module",
   "author": "Milad Afkhami <dev.miladafkhami@gmail.com> (https://milad-afkhami.com)",
