@@ -16,22 +16,22 @@
   ],
   "license": "MIT",
   "scripts": {
-    "stylesheets": "style-wiz constantsDir=src/constants/stylesheets destinationDir=public/stylesheets/style-wiz",
     "build": "npm run lint && rm -rf build && rollup -c",
-    "prettier": "prettier --write .",
+    "format": "prettier --write .",
+    "lint:fix": "eslint . --fix",
+    "lint": "eslint .",
+    "minor": "npm version minor -m \"build: minor package version to %s\"",
+    "patch": "npm version patch -m \"build: patch package version to %s\"",
+    "prepare": "husky prepare",
+    "release:minor": "yarn minor && git push && npm publish",
+    "release:patch": "yarn patch && git push && npm publish",
+    "semantic-release": "semantic-release",
+    "storybook:build": "yarn stylesheets && storybook build",
     "storybook:dev": "yarn stylesheets && storybook dev -p 6006",
     "storybook:start": "http-server storybook-static -p 6006",
-    "storybook:build": "yarn stylesheets && storybook build",
-    "prepare": "husky prepare",
+    "stylesheets": "style-wiz constantsDir=src/constants/stylesheets destinationDir=public/stylesheets/style-wiz",
     "test": "jest",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "typedoc": "typedoc src/index.ts --name \"UIWiz\" --readme README.md --plugin typedoc-plugin-markdown --excludeExternals && git add docs/* && git commit -m \"docs: autogenerate typedocs\"",
-    "patch": "npm version patch -m \"build: patch package version to %s\"",
-    "minor": "npm version minor -m \"build: minor package version to %s\"",
-    "release:patch": "yarn patch && git push && npm publish",
-    "release:minor": "yarn minor && git push && npm publish",
-    "semantic-release": "semantic-release"
+    "typedoc": "typedoc src/index.ts --name \"UIWiz\" --readme README.md --plugin typedoc-plugin-markdown --excludeExternals && git add docs/* && git commit -m \"docs: autogenerate typedocs\""
   },
   "types": "build/types/index.d.ts",
   "main": "./build/index.js",
@@ -43,14 +43,14 @@
     "types": "./build/types/index.d.ts"
   },
   "files": [
-    "build"
+    "build/**/*"
   ],
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:milad-afkhami/ui-wiz.git"
+    "url": "https://github.com/milad-afkhami/ui-wiz.git"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.25.4",
@@ -66,7 +66,6 @@
     "@storybook/addon-mdx-gfm": "7.5.0",
     "@storybook/addon-onboarding": "1.0.8",
     "@storybook/blocks": "7.5.0",
-    "@storybook/nextjs": "7.5.0",
     "@storybook/preview-api": "~7.5.3",
     "@storybook/react": "7.5.0",
     "@storybook/react-webpack5": "7.5.0",
@@ -112,7 +111,7 @@
     "typescript": "~5.3.0"
   },
   "peerDependencies": {
-    "goober": "~2.1.13",
+    "goober": "~2.1.x",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "style-wiz": "~0.3.9"
