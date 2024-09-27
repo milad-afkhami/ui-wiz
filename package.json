@@ -22,7 +22,7 @@
     "storybook:dev": "yarn stylesheets && storybook dev -p 6006",
     "storybook:start": "http-server storybook-static -p 6006",
     "storybook:build": "yarn stylesheets && storybook build",
-    "postinstall": "husky",
+    "prepare": "husky prepare",
     "test": "jest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
