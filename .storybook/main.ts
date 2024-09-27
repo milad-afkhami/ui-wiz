@@ -1,4 +1,4 @@
-import type { StorybookConfig } from "@storybook/nextjs";
+import type { StorybookConfig } from "@storybook/react-webpack5";
 
 const config: StorybookConfig = {
   stories: [
@@ -10,8 +10,12 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/react",
+    "@storybook/addon-mdx-gfm",
   ],
-  framework: "@storybook/nextjs",
+  framework: {
+    name: "@storybook/react-webpack5",
+    options: {},
+  },
   staticDirs: ["../public/"],
   docs: {
     autodocs: "tag",
