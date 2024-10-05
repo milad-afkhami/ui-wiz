@@ -45,7 +45,6 @@ const InputWrapper: HOCFunctionalComponent<InputWrapperProps> = function (
 
   return (
     <Container
-      id={id}
       className={className}
       data-testid="kitInput"
       labelFloated={labelFloated}
@@ -74,6 +73,7 @@ const InputWrapper: HOCFunctionalComponent<InputWrapperProps> = function (
         </Div>
       </Div>
       <InputLabel
+        htmlFor={id}
         required={required}
         text={label}
         floated={labelFloated}

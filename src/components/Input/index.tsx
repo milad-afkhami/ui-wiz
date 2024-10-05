@@ -1,9 +1,10 @@
 import { Div } from "style-wiz";
 import {
-  type ChangeEvent,
-  forwardRef,
-  type KeyboardEventHandler,
+  useRef,
   useState,
+  forwardRef,
+  type ChangeEvent,
+  type KeyboardEventHandler,
   type PropsWithChildren,
 } from "react";
 import InputWrapper from "./atoms/Wrapper";
@@ -27,7 +28,7 @@ const Input = forwardRef<HTMLInputElement, PropsWithChildren<InputProps>>(
       onSubmit,
       disabled,
       className = "",
-      id = "",
+      id,
       state,
       startAdornment,
       endAdornment,
@@ -39,6 +40,10 @@ const Input = forwardRef<HTMLInputElement, PropsWithChildren<InputProps>>(
       maxLength,
       readOnly,
     } = props;
+
+    const _id = useRef(
+      id ?? `input--${Math.floor(Math.random() * 100_000).toString()}`
+    );
 
     const [focused, setFocused] = useState(false);
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -73,8 +78,8 @@ const Input = forwardRef<HTMLInputElement, PropsWithChildren<InputProps>>(
       <Div width="100%">
         <Div position="relative">
           <InputWrapper
+            id={_id.current}
             focused={focused}
-            id={id}
             className={className}
             placeholder={placeholder}
             value={value}
@@ -99,6 +104,7 @@ const Input = forwardRef<HTMLInputElement, PropsWithChildren<InputProps>>(
               <Adornment icon={startAdornment} />
             </Div>
             <StyledInput
+              id={_id.current}
               dir={dir}
               ref={ref}
               hideCaret={hideCaret}
