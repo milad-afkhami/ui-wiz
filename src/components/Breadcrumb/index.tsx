@@ -1,10 +1,9 @@
 import { Div, Text } from "style-wiz";
 
 type Item = { url: string; title: string };
-type LastItem = { title: string; url?: never };
 
 export type BreadcrumbProps = {
-  items: [Item, ...Item[], LastItem];
+  items: Item[];
 };
 
 const Breadcrumb = (props: BreadcrumbProps) => {
@@ -12,7 +11,7 @@ const Breadcrumb = (props: BreadcrumbProps) => {
 
   return (
     <Div flex={["center"]}>
-      {items.map(({ title, url }) => (
+      {items.map(({ title, url }, index) => (
         <Div flex={["center"]}>
           {url ? (
             <a href={url}>
@@ -29,7 +28,7 @@ const Breadcrumb = (props: BreadcrumbProps) => {
             <Text color="text-secondary-main">{title}</Text>
           )}
 
-          {url && (
+          {index === items.length - 1 && (
             <Div px="2" flex={["flex-end"]}>
               <Text
                 color="text-secondary-main"
