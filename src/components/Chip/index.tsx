@@ -59,16 +59,18 @@ const Chip = (props: ChipProps) => {
         </Text>
       </Div>
 
-      <Div width="24px" height="24px" curve="circle" overflow="hidden">
-        <ClickableArea
-          onClick={onCancelClick}
-          rippleColor="brand-primary-light"
-          hoverColor={hoverColor}
-          flex={["center", "center"]}
-        >
-          <Icon name="cancel-outlined" size="h-lg" color="inherit" />
-        </ClickableArea>
-      </Div>
+      {onCancelClick ? (
+        <Div width="24px" height="24px" curve="circle" overflow="hidden">
+          <ClickableArea
+            onClick={onCancelClick}
+            rippleColor="brand-primary-light"
+            hoverColor={hoverColor}
+            flex={["center", "center"]}
+          >
+            <Icon name="cancel-outlined" size="h-lg" color="inherit" />
+          </ClickableArea>
+        </Div>
+      ) : null}
     </Div>
   );
 };
